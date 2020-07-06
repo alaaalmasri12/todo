@@ -23,15 +23,15 @@ function ToDo(props) {
     localStorage.setItem('todo', JSON.stringify(listall));
   }
 
-  const toggleComplete = id => {
-    let item = listall.filter(i => i._id === id)[0] || {};
-    if (item._id) {
-      item.complete = !item.complete;
-      let list = listall.map(listItem => listItem._id === item._id ? item : listItem);
-      list.pop();
-      setList(list);
-    }
-  }
+  // const toggleComplete = id => {
+  //   let item = listall.filter(i => i._id === id)[0] || {};
+  //   if (item._id) {
+  //     item.complete = !item.complete;
+  //     let list = listall.map(listItem => listItem._id === item._id ? item : listItem);
+  //     list.pop();
+  //     setList(list);
+  //   }
+  // }
 
 
   useEffect(() => {
