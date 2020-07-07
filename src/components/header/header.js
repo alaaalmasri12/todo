@@ -15,8 +15,3 @@ function Header(props) {
 }
 export default Header;
 
-{/* <footer>
-<Navbar bg="dark">
-    <Navbar.Brand>&copy; 2020 401d3</Navbar.Brand>
-</Navbar>
-</footer> */}

@@ -5,9 +5,6 @@ import Alert from 'react-bootstrap/Alert';
 import axios from 'axios';
 import './todo.scss';
 const todoAPI = 'https://access-denied-lab-32.herokuapp.com/todo';
-// https://access-denied-lab-32.herokuapp.com/todo
-// https://lab32-401.herokuapp.com/todo
-// https://lab-32.herokuapp.com/todo
 const ToDo = () => {
   const [list, setList] = useState([]);
   const _addItem = (item) => {
@@ -25,6 +22,7 @@ const ToDo = () => {
       })
       .catch(console.error);
   };
+  
   const _toggleComplete = id => {
     let item = list.filter(i => i._id === id)[0] || {};
     let index = list.indexOf(item);
@@ -89,6 +87,7 @@ const ToDo = () => {
     axios.get(todoAPI)
       .then(res => {
         console.log(res);
+        
         setList(res.data);
       }, [])
       .catch(err => {
@@ -99,7 +98,7 @@ const ToDo = () => {
   // useEffect(_toggleComplete, list);
   return (
     <><div>
-      <Alert color="success">
+      <Alert color="success" className="task">
         <h2>
           There are {list.filter(item => !item.complete).length} Items To Complete
         </h2>

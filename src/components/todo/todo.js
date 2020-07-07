@@ -60,7 +60,7 @@ function ToDo(props) {
   return (
     <>
       <header>
-        <Alert className="task" >
+        <Alert className="task"  style="background-color:#2a3842">
           <h2>
             To do List Manager ({listall.filter(item => !item.complete).length})</h2>
         </Alert>
